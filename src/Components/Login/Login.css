@@ -64,3 +64,15 @@
     color: #001780;
     font-weight: 500;
 }
+
+/* From Sign Up */
+.not-strong{
+    color: red;
+    font-weight: 500;
+}
+
+.strong{
+    font-size: 20px;
+    color: #04a104;
+    font-weight: 600;
+}
