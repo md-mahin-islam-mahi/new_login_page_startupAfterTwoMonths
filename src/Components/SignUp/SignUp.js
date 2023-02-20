@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const [message, setMessage] = useState('');
-    const [strong, setStrong] = useState('');
+    const [passNotFound, setPassNotFound] = useState('');
 
     const handleLogin = e => {
         e.preventDefault()
@@ -12,12 +12,15 @@ const SignUp = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        if (password.length < 8 && !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password) || !/[@#$%^&+=]/.test(password)) {
+        if (!password) {
+            setPassNotFound('Password not found')
+        } else if (password.length < 8 && !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password) || !/[@#$%^&+=]/.test(password)) {
             setMessage('Password is not strong enough, use minimum 8 characters and variation of capital letters, small letters, numbers and special characters.')
-            setStrong('')
+            setPassNotFound('')
         } else {
-            setStrong('Password is strong');
             setMessage('')
+            alert("Successfully Created Accound!")
+            form.reset();
         }
     }
 
@@ -43,8 +46,8 @@ const SignUp = () => {
                             {message}
                         </span>
 
-                        <span className='strong'>
-                            {strong}
+                        <span className='not-strong'>
+                            {passNotFound}
                         </span>
                     </div>
 
@@ -52,7 +55,7 @@ const SignUp = () => {
                     <div className='forgot'>
                     </div>
                     <p>Already have an account? <span>
-                        <Link to="/login">Login</Link>
+                        <Link to="/login" className="change">Login</Link>
                     </span>
                     </p>
                 </div>

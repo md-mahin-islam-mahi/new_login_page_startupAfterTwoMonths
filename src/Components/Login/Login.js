@@ -25,7 +25,7 @@ const Login = () => {
                         </span></p>
                     </div>
                     <p>Don't have an account? <span>
-                            <Link to="/signup">Sign Up</Link>
+                            <Link to="/signup" className="change">Sign Up</Link>
                         </span>
                     </p>
                 </div>

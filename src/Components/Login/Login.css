@@ -61,7 +61,13 @@
 }
 
 .click{
-    color: #001780;
+    color: #1439da;
+    font-weight: 500;
+}
+
+.change{
+    text-decoration: none;
+    color: #8527f1;
     font-weight: 500;
 }
 
