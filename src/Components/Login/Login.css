@@ -1,8 +1,10 @@
 .form{
-    height: 500px;
     width: 400px;
     margin: 150px auto;
-    /* background-color: aqua; */
+    background-color: #e6e6e6;
+    box-shadow: 3px 3px 5px #757575,
+                inset 3px 3px 15px #ffffff,
+                inset -3px -3px 15px #797979
 }
 
 .card{
@@ -16,6 +18,10 @@
     width: 80%;
     margin: 0 auto;
     text-align: start;
+}
+
+#password-field{
+    margin-top: 45px; 
 }
 
 .input-text{
@@ -32,5 +38,29 @@
     font-weight: 400;
     outline: none;
     border: none;
-    border-bottom: 1px solid #7e7e7e;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.login-btn{
+    width: 80%;
+    height: 35px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    background-color: #7e7e7e;
+    cursor: pointer;
+    transition: 0.1s ease-out;
+}
+
+.login-btn:hover{
+    background-color: #fff;
+    color: #7e7e7e;
+    border: 1px solid #e6e6e6;
+}
+
+.click{
+    color: #001780;
+    font-weight: 500;
 }
